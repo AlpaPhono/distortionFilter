@@ -22,16 +22,19 @@ The plugin designed in this report was a distortion filter. Made combining a lad
 ## Implimenting Filter
 > JUCE::dsp::LadderFilter<float>
  <img scr="images/ladderfilter.png">
+> Figure 1: Creating Ladder Filter in pluginProcessor.h
   
   
 There is a lot of precursor work that needs to be done before using the filter from the dsp module. It needs a process spec, and audioBlock and a context replacing object.<br/>
 The Process spec is a dsp class that creates an object that can hold information about the audio data that will be processed by the dsp algorithm.<br/>
   
- <img scr="images/creatingProcessspec"> 
-  
+ <img scr="images/creatingProcessspec.png"> 
+> Figure 2: Creating and using Process Spec
+<br/>
 Dsp objects use the information curated by the spec via the prepare function.<br/>
 The final steps in using the dsp algorithms is in creating an audio block and a context object.
-<img scr"images/audioblock">
+<img scr"images/audioblock.png">
+> Figure 3: Creating Audio block and Context Replacing 
   
 The audio block behaves as the audiobuffer for the DSP filter and the process context replacing behaves like a buffer write pointer, which replaces the original signal with the processed signal from the filter.<br/>
   
@@ -39,20 +42,28 @@ The audio block behaves as the audiobuffer for the DSP filter and the process co
 The Hyperbolic tangent function was adapted to create distortion to the samples.<br/>
 
 <img src="images/function.png">
+> Figure 4: Nonlinear function source. (pirkle, 2019)
+
   
 <img src="images/codefunction.png">
+> Figure 5: Equation in code form
 
 ## Creating Parameters
 Using the JUCE class audio processor value tree state. A value tree of the plugins parameters were created.
 <img src="images/valuetree.png">
+> Figure 6: Parameter Value tree
 <br/>
 Creating this class allows you to link parameters with their sliders in the pluginEditor. The class has slider and button attachments.
 <img src="images/attachments.png">
+> Figure 7: multiple valuetree atttachments
   
 ## GUI Design
 After creating and positioning the sliders a user interface class was created to manipulate the look and feel functions for the sliders. A texture was downloaded off of the internet and was used as the background of the plugin.
 <img src="images/gui.png">
+> Figure 8: Creating and labelling Components
+<br/>
 <img src="images/guiclass.png">
+> Figure 9: UserInterface class with customised look and feel function
 
 ## Results
 The plugin functions on multiple platforms. The pre sets menu would have been a modern addition to the plugin as many plugins today have a selection of presets accessible from the UI of the plugin. The look and feel of the buttons and combo box could have been redesigned to ft the entire aesthetic of the rest of the plugin.
