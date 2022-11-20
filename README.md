@@ -19,6 +19,42 @@ The plugin designed in this report was a distortion filter. Made combining a lad
 3. Creating Parameters
 4. Creating Sliders and customising GUI
 
+## Implimenting Filter
+> JUCE::dsp::LadderFilter<float>
+  <!-- image1 of ladder filter -->
+There is a lot of precursor work that needs to be done before using the filter from the dsp module. It needs a process spec, and audioBlock and a context replacing object.<br/>
+The Process spec is a dsp class that creates an object that can hold information about the audio data that will be processed by the dsp algorithm.<br/>
+  
+ <!-- image of process spec--> 
+  
+Dsp objects use the information curated by the spec via the prepare function.<br/>
+The final steps in using the dsp algorithms is in creating an audio block and a context object.
+<!-- image of creating audioblock -->
+  
+The audio block behaves as the audiobuffer for the DSP filter and the process context replacing behaves like a buffer write pointer, which replaces the original signal with the processed signal from the filter.<br/>
+  
+## Adding Distortion (Noninear processing function)
+The Hyperbolic tangent function was adapted to create distortion to the samples.<br/>
+
+<!-- nonlinear function image -->
+  
+<!-- equation in code form -->
+
+## Creating Parameters
+Using the JUCE class audio processor value tree state. A value tree of the plugins parameters were created.
+<!-- valuetree image -->
+Creating this class allows you to link parameters with their sliders in the pluginEditor. The class has slider and button attachments.
+<!-- valuetree attachments -->
+  
+## GUI Design
+After creating and positioning the sliders a user interface class was created to manipulate the look and feel functions for the sliders. A texture was downloaded off of the internet and was used as the background of the plugin.
+<!--labell image-->
+<!-- look and feel class -->
+
+## Results
+The plugin functions on multiple platforms. The pre sets menu would have been a modern addition to the plugin as many plugins today have a selection of presets accessible from the UI of the plugin. The look and feel of the buttons and combo box could have been redesigned to ft the entire aesthetic of the rest of the plugin.
+
+
 
 ## References 
 Antonia, D. (2020) Audio Programming Lecture. [Online] 23rd February 2021. Available from:
