@@ -22,7 +22,7 @@ The plugin designed in this report was a distortion filter. Made combining a lad
 
 ## References 
 Antonia, D. (2020) Audio Programming Lecture. [Online] 23rd February 2021. Available from:
-https://uh.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=690b3a1d-eb97-49e5-8d1a- acd8014712ca [Accessed on 13th May 2021]<br/>
+https://uh.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=690b3a1d-eb97-49e5-8d1a-acd8014712ca [Accessed on 13th May 2021]<br/>
 <br/>
 Pirkle, W. (2019) Chapter 19: Nonlinear Processing: Distortion, Tube Simulation, and HF Exciters. In: Pirkle, W. Designing Audio Effect Plugins in C++ For AAX, AU, and VST3 with DSP Theory – second Edition. New York: Routledge.<br/>
 <br/>
