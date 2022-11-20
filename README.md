@@ -34,7 +34,8 @@ The Process spec is a dsp class that creates an object that can hold information
 Dsp objects use the information curated by the spec via the prepare function.<br/>
 The final steps in using the dsp algorithms is in creating an audio block and a context object.
 <img scr"images/audioblock.png">
-> Figure 3: Creating Audio block and Context Replacing 
+> Figure 3: Creating Audio block and Context Replacing
+<br/>
   
 The audio block behaves as the audiobuffer for the DSP filter and the process context replacing behaves like a buffer write pointer, which replaces the original signal with the processed signal from the filter.<br/>
   
@@ -43,10 +44,11 @@ The Hyperbolic tangent function was adapted to create distortion to the samples.
 
 <img src="images/function.png">
 > Figure 4: Nonlinear function source. (pirkle, 2019)
-
+<br/>
   
 <img src="images/codefunction.png">
 > Figure 5: Equation in code form
+ <br/>
 
 ## Creating Parameters
 Using the JUCE class audio processor value tree state. A value tree of the plugins parameters were created.
