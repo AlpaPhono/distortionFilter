@@ -21,14 +21,14 @@ The plugin designed in this report was a distortion filter. Made combining a lad
 
 ## Implimenting Filter
 > JUCE::dsp::LadderFilter<float>
- <img scr="images/ladderfilter.png">
+<img scr="images/ladderfilter.png">
 > Figure 1: Creating Ladder Filter in pluginProcessor.h
   
   
 There is a lot of precursor work that needs to be done before using the filter from the dsp module. It needs a process spec, and audioBlock and a context replacing object.<br/>
 The Process spec is a dsp class that creates an object that can hold information about the audio data that will be processed by the dsp algorithm.<br/>
   
- <img scr="images/creatingProcessspec.png"> 
+<img scr="images/creatingProcessspec.png"> 
 > Figure 2: Creating and using Process Spec
 <br/>
 Dsp objects use the information curated by the spec via the prepare function.<br/>
