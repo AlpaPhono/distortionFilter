@@ -2,7 +2,7 @@
 <!-- imit -->
 ## A multiband filter plugin that causes low level distortion with harmonics. Created with [JUCE](https://juce.com/)
 
-<img src="images/Screenshot 2022-11-20 at 15.43.16.png" width="70%">
+<img src="images/Screenshot 2022-11-20 at 15.43.16.png">
 
 <!-- omit -->
 
